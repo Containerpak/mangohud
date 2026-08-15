@@ -8,7 +8,11 @@ WORKDIR /tmp/MangoHud
 
 RUN tar -xzf /tmp/mangohud.tar.gz -C /tmp && \
     tar -xf MangoHud-package.tar && \
-    ./mangohud-setup.sh install
+    ./mangohud-setup.sh install && \
+    sed -i 's|MANGOHUD_LIB_NAME="/usr/lib|MANGOHUD_LIB_NAME="${CPAK_ROOTFS:-}/usr/lib|' /usr/bin/mangohud && \
+    sed -i 's|"/usr/lib/mangohud|"../../../lib/mangohud|' \
+        /usr/share/vulkan/implicit_layer.d/MangoHud.x86.json \
+        /usr/share/vulkan/implicit_layer.d/MangoHud.x86_64.json
 
 FROM ghcr.io/containerpak/wine:main
 
