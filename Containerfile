@@ -19,7 +19,6 @@ RUN apt-get update && \
     cpak-clean-junk
 
 COPY --from=source /usr/bin/mangohud /usr/bin/mangohud
-COPY --from=source /usr/bin/mangohud-server /usr/bin/mangohud-server
 COPY --from=source /usr/bin/mangoplot /usr/bin/mangoplot
 COPY --from=source /usr/lib/mangohud /usr/lib/mangohud
 COPY --from=source /usr/share/doc/mangohud /usr/share/doc/mangohud
