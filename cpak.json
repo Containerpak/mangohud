@@ -4,7 +4,7 @@
   "name": "MangoHud",
   "description": "Monitor frame rate, frame times and system performance while playing.",
   "version": "0.8.4",
-  "image": "ghcr.io/containerpak/mangohud@sha256:9c0fadfecdd1510193da02a2f24852d6b91ea061a78717011ace524a80083b03",
+  "image": "ghcr.io/containerpak/mangohud@sha256:ca17f717b9222c88b9d7004ff566d1d94a82fa07adb629f55db05df8b0e685a5",
   "binaries": [
     "/usr/bin/mangohud"
   ],
